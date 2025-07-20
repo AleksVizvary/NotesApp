@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>NOTES</title>
+    <link rel="stylesheet" href="{% static 'add_note_styles.css' %}">
+
+</head>
+
+<body>
+
+    <h1>New note:</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+
+    <h1 class="">To do:</h1>
+    {% for note in notes %}
+        <div>
+            <h3>{{ note.title}}</h3>
+            <p>{{ note.content}}</p>
+            <small>{{ note.created_at }}</small>
+        </div>
+    {% endfor %}
+
+</body>
+</html>
