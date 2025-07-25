@@ -5,14 +5,14 @@ A simple Django-based note-taking app — with tags, search. Built to stay organ
 
 Planned features:
 
-👤️ User login
+User login
 
-👤 Markdown editor
+Markdown editor
 
-👤 Note pinning
+Note pinning
 
 ## Screenshot
 
-Here's how the app looks in action:
+Here's how the app looks for now:
 
 ![Notes App UI](assets/screenshot_25_07_25.png)
