@@ -11,6 +11,18 @@ Markdown editor
 
 Note pinning
 
+features:
+
+- Add and view notes
+- Tag notes for filtering
+- Minimalist layout using custom CSS (no frameworks)
+
+planned features:
+
+- User login & authentication
+- Markdown editor
+- Note pinning
+
 ## Screenshot
 
 Here's how the app looks for now:
