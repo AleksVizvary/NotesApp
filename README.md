@@ -11,3 +11,8 @@ Planned features:
 
 👤 Note pinning
 
+## Screenshot
+
+Here's how the app looks in action:
+
+![Notes App UI](assets/screenshot_25_07_25.png)
