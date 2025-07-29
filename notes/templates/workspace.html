@@ -3,23 +3,18 @@
 <html lang="pl">
 <head>
     <title>NOTES</title>
-    <link rel="stylesheet" href="{% static 'add_note_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'workspace.css' %}">
 
 </head>
-
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
-
-
-<div class="old_notes_sec">
-    {% for note in notes %}
-        <div class="old_note">
-            <h3>{{ note.title}}</h3>
-            <p class="content">{{ note.content}}</p>
-            <small>{{ note.created_at }}</small>
-        </div>
-    {% endfor %}
-</div>  
+<body>
+    <div class="old_notes_sec">
+        {% for note in notes %}
+            <div class="old_note">
+                <h3>{{ note.title}}</h3>
+                <p class="content">{{ note.content}}</p>
+                <small>{{ note.created_at }}</small>
+            </div>
+        {% endfor %}
+    </div>  
+</body>
+</html>

@@ -3,6 +3,7 @@ html, body {
     margin: 0px;
     height: 100vh;
     width: 100vw;
+
 }
 
 * {
@@ -46,8 +47,9 @@ html, body {
     
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items:flex-start;
+
+
 }
 
 .old_notes_sec {
@@ -61,49 +63,110 @@ html, body {
 
     row-gap: 20px;
     overflow-y: auto;  
+
+    
 }
-
-
 
 /* ==== 2 lvl, NEW_NOTE_FORM & OLD_NOTES ===== */
 
-
-
 .new_note_form {
-    height: 80%;
-    width: 200px;
+    border: 3px solid #004aad;
+    height: 800px;
+    padding: 2px;
 
-    border: #004aad;
-    border-style: solid;
-    border-width: 3px;
+    background-color: white;
 
+    border-radius: 25px;
 
 }
 
+.new_note_inside {
+    display: grid;
+    grid-template-rows: 
+        45px    /* title */
+        1fr     /* content */
+        45px    /* tags */
+        75px;   /* save button */
+
+    gap: 15px;
+    height: 100%;
+    width: 200px;
+
+    padding: 10px;
+    border: 3px solid #85ad00;
+    border-radius: 25px;
+
+}
 
 .old_note {
+    display: grid;
+    grid-template-rows: 
+        45px    /* title */
+        auto    /* content */
+        75px    /* date */
+        75px    /* tags */
+
+    ;
+    gap: 15px;
+    min-height: 400px;
     height: auto;
-    width: 90%;
 
-    display: block;
+    width: 800px;
+    max-width: 100%;
 
-    border: #004aad;
-    border-style: solid;
-    border-width: 3px;
+    padding: 10px;
+    border: 3px solid #85ad00;
+    border-radius: 25px;
 
-    box-sizing: border-box;
-
+    word-break: break-all;
 }
  
 /* ======================================== */
 
-input, textarea {
-
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
+.title_box {
+    display: grid;
+    grid-template-columns: 
+        90%
+        10%
 }
-.content {
+
+
+/* ==== 3 lvl, NEW_FORM ELEMENTS: TITLE, CONTENT, TAGS ===== */
+
+.new_note_title input, 
+.new_note_content input, 
+.new_note_tag input, 
+.save_button {
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: block;
+
+    background-color: black;
+    border-radius: 25px;
+}
+
+.new_note_title input, 
+.new_note_tag input {
+    text-align: left;          
+    padding: 10px 15px;   
+}
+
+.new_note_content input {
+    text-align: left; 
+    padding: 10px 15px;   
+    line-height: 1.4;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;  /* albo white, jak wolisz */
+}
+
+/* ==== 3 lvl, OLD FORMS ELEMENTS: TITLE, CONTENT, TAGS ===== */
+
+
+.check, 
+.checkbox {
+    height: 40px;
+    width: 40px;
 }

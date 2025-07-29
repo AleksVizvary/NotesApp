@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug</title>
+    <link rel="stylesheet" href="{%static 'test_styles.css'%}">
+
+</head>
+<body>
+                <div class="old_note">
+                    <div class="title_box">
+                        <p class="old_note_title">{{ note.title }}</p>
+                        <label class="check">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkmark"></span>
+                        </label> 
+                    </div>
+                    <p class="old_note_content">{{ note.content}}</p>
+                    <small class="old_note_date">{{ note.created_at }}</small>
+                    <small class="old_note_tag">#{{ note.tags }}</small>
+                </div>
+</body>
+</html>
