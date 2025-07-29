@@ -10,10 +10,12 @@
     <div class="container">
         <div class="new_note_sec">
             <div class="new_note_form">
-                <form method="POST">
+                <form method="POST" class="new_note_inside">
                     {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Save</button>
+                    <div class="new_note_title">{{ form.title }}</div>
+                    <div class="new_note_content">{{ form.content }}</div>
+                    <div class="new_note_tag">{{ form.tags }}</div>
+                    <button class="save_button" type="submit" >Save</button>
                 </form>
             </div>
         </div>
@@ -22,9 +24,16 @@
         <div class="old_notes_sec">
             {% for note in notes %}
                 <div class="old_note">
-                    <h3>{{ note.title}}</h3>
-                    <p class="content">{{ note.content}}</p>
-                    <small>{{ note.created_at }}</small>
+                    <div class="title_box">
+                        <p class="old_note_title">{{ note.title }}</p>
+                        <label class="check">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkmark"></span>
+                        </label> 
+                    </div>
+                    <p class="old_note_content">{{ note.content}}</p>
+                    <small class="old_note_date">{{ note.created_at }}</small>
+                    <small class="old_note_tag">#{{ note.tags }}</small>
                 </div>
             {% endfor %}
         </div>  
