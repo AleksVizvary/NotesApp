@@ -3,4 +3,4 @@ from notes.models import Note
 
 def test_view(request):
     notes = Note.objects.first()
-    return render(request, 'test.html', {'note': notes})
+    return render(request, 'test.html',{'note': notes})
