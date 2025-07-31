@@ -3,7 +3,7 @@ html, body {
     margin: 0px;
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-color: white;
 
 }
 
@@ -14,19 +14,20 @@ html, body {
     font-size: large;
     text-transform: uppercase;
     box-sizing: border-box;
+    color: black;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: white;  /* albo white, jak wolisz */
+  color: black;  
 }
 
 .new_note_sec input {
-        color: white;
+    color: black;
 }
 
 .old_note input {
-    color: white;
+    color: black;
 }
 
 /* ======================================== */
@@ -84,7 +85,6 @@ textarea::placeholder {
     height: 90%;
     padding: 2px;
 
-    background-color: white;
     border-radius: 25px;
 
 }
@@ -115,7 +115,6 @@ textarea::placeholder {
     height: 100%;
     display: block;
 
-    background-color: black;
     border-radius: 25px;
 }
 
@@ -138,8 +137,6 @@ textarea::placeholder {
     padding-top: 10px;
 }
 
-
-
 /* ==== 2 lvl, OLD_NOTE ===== */
 .old_note {
     display: grid;
@@ -147,9 +144,9 @@ textarea::placeholder {
         45px    /* title */
         auto    /* content */
         75px    /* date */
-        75px    /* tags */
-
+        75px;    /* tags */
     ;
+
     gap: 15px;
     height: auto;
 
@@ -161,10 +158,6 @@ textarea::placeholder {
     border-radius: 25px;
 
     word-break: break-all;
-
-    color: black;
-    background-color: black;
-
 }
 
 /* ==== 3 lvl, OLD FORMS ELEMENTS: TITLE, CONTENT, TAGS ===== */
@@ -180,14 +173,12 @@ textarea::placeholder {
 
 .old_note_title {
     border-radius: 25px;
-    background-color: white;
     height: 40px;
     padding-left: 25px;
     padding-top: 10px;
     align-items: center;
     margin: 0;
 }
-
 
 .check
 .checkbox {
@@ -202,7 +193,6 @@ textarea::placeholder {
 .old_note_content,
 .old_note_date,
 .old_note_tag {
-    background-color: white;
     display: grid;
     padding-left: 25px;
 
@@ -213,10 +203,7 @@ textarea::placeholder {
     align-items: center;
 }
 
-
-
 /* ===== TYPOGRAPHY ===== */
-
 
 * {
     font-weight: bold;
