@@ -26,14 +26,18 @@
             <div class="old_note">
                 <div class="title_box">
                     <p class="old_note_title">{{ note.title }}</p>
-                    <label class="check">
-                        <input type="checkbox" class="checkbox">
-                        <span class="checkmark"></span>
-                    </label> 
+                    <form method="POST" action="{% url 'mark_done' note.id %}" class="new_note_inside">
+                        {% csrf_token %}
+                    
+                        <label class="check">
+                            <input type="checkbox" class="checkbox" onChange="this.form.submit()">
+                            <span class="checkmark"></span>
+                        </label> 
+                    </form>
                 </div>
-                <p class="old_note_content">{{ note.content}}</p>
+                <p class="old_note_content">{{ note.content }}</p>
                 <small class="old_note_date">{{ note.created_at }}</small>
-                <small class="old_note_tag">#{{ note.tags }}</small>
+                <small class="old_note_tag">{{ note.tags }}</small>
             </div>
             {% endfor %}
         </div>  
