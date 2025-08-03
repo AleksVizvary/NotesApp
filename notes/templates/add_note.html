@@ -26,13 +26,12 @@
             <div class="old_note">
                 <div class="title_box">
                     <p class="old_note_title">{{ note.title }}</p>
-                    <form method="POST" action="{% url 'mark_done' note.id %}" class="new_note_inside">
+                    <form method="POST" action="{% url 'mark_done' note.id %}?next={{ request.get_full_path }}">
                         {% csrf_token %}
-                    
                         <label class="check">
                             <input type="checkbox" class="checkbox" onChange="this.form.submit()">
                             <span class="checkmark"></span>
-                        </label> 
+                        </label>
                     </form>
                 </div>
                 <p class="old_note_content">{{ note.content }}</p>
@@ -44,7 +43,11 @@
 
         <div class="menu_sec">
             <div class="button_wrapper">
-                <button class="layout_button"></button>
+                {% if show_done %}
+                    <a class="layout_button" href="?show_done=0">Show to-do</a>
+                {% else %}
+                    <a class="layout_button" href="?show_done=1">Show done</a>
+                {% endif %}
             </div>
         
         </div>
