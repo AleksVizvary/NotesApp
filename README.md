@@ -1,4 +1,16 @@
 # 🗒️ NotesApp
+> cd NotesApp                           
+> python -m venv venv                                     
+> source venv/bin/activate                            
+> pip install -r requirements.txt                                   
+> pip install django                           
+> python manage.py makemigrations                           
+> python manage.py migrate                                                         
+
+or 
+
+> source setup.sh
+
 
 A simple Django-based note-taking app — with tags, search. Built to stay organised without distractions.  
 Uses minimalist layout using custom CSS.  
