@@ -16,10 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from notes.views import add_note
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', add_note, name='add_note'),
-    path('test/', include('frontdebug.urls'))
-]
+    path('', include('notes.urls')),
+    ]
