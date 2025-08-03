@@ -29,7 +29,7 @@
                     <form method="POST" action="{% url 'mark_done' note.id %}?next={{ request.get_full_path }}">
                         {% csrf_token %}
                         <label class="check">
-                            <input type="checkbox" class="checkbox" onChange="this.form.submit()">
+                            <input type="checkbox" class="checkbox" {% if note.done %}checked{% endif %} onChange="this.form.submit()">
                             <span class="checkmark"></span>
                         </label>
                     </form>
