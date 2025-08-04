@@ -26,7 +26,7 @@ def add_note(request):
 
 def mark_done(request, note_id):
     note = Note.objects.get(id=note_id)
-    note.done = True
+    note.done = not note.done
     note.save()
     next_url = request.GET.get('next', 'add_note')
     return redirect(next_url)
