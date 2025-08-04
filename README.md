@@ -23,8 +23,9 @@ Allows to add to-do notes.
 ## Screenshot
 
 Here's how the app looks for now:
-
-29_07_25  
-![Notes App UI](assets/screenshot_29_07_25.png)  
-25_07_25  
-![Notes App UI](assets/screenshot_25_07_25.png)
+4_8_25  
+![Notes App UI](assets/screenshot_4_8_25.png)  
+29_7_25  
+![Notes App UI](assets/screenshot_29_7_25.png)  
+25_7_25  
+![Notes App UI](assets/screenshot_25_7_25.png)
