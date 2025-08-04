@@ -3,7 +3,6 @@ html, body {
     margin: 0px;
     height: 100vh;
     width: 100vw;
-    background-color: white;
 
 }
 
@@ -53,7 +52,7 @@ textarea::placeholder {
 
 .new_note_sec {
     height: 100%;
-    width: 30%;
+    width: 20%;
     border: none;
     border-right-width: 3px;
     border-right-style: solid;
@@ -65,8 +64,8 @@ textarea::placeholder {
 }
 
 .old_notes_sec {
-    height: 90%;
-    width: 60%;
+    height: 100%;
+    width: 70%;
 
     display: flex;
     justify-content:flex-start;
@@ -75,6 +74,9 @@ textarea::placeholder {
 
     row-gap: 90px;
     overflow-y: auto;  
+
+    padding-top: 4%;
+    padding-bottom: 4%;
 }
 
 .menu_sec {
@@ -83,7 +85,6 @@ textarea::placeholder {
 
     border-left-width: 3px;
     border-left-style: solid;
-
 
     display: flex;
     justify-content:flex-start;
@@ -99,7 +100,6 @@ textarea::placeholder {
     width: 75px;
     height: 75px;
     padding: 2px;
-    border: solid, black, 3px;
     
     border-radius: 25px;
 }
@@ -109,7 +109,15 @@ textarea::placeholder {
     height: 100%;
     border-radius: 25px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid, 3px;
+
+    text-align: center;
 }
+
+
 
 /* ==== 2 lvl, NEW_NOTE_FORM ===== */
 
@@ -169,9 +177,12 @@ textarea::placeholder {
 }
 
 .new_note_content textarea {
+    text-align: start;
+
     vertical-align: top;
     padding-top: 10px;
 }
+
 
 /* ==== 2 lvl, OLD_NOTE ===== */
 .old_note {
@@ -191,6 +202,7 @@ textarea::placeholder {
 
     padding: 10px;
     border: 3px solid;
+    border-color: black;
     border-radius: 25px;
 
     word-break: break-all;

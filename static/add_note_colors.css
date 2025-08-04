@@ -1,0 +1,34 @@
+.old_notes_sec {
+    background-color: rgb(98, 175, 202);
+}
+.old_note{
+    background-color: white;
+    opacity: 0.4;
+}
+
+.new_note_sec {
+    background-color:#5e4fa2;
+
+}
+
+.new_note_title input,
+.new_note_content input, 
+.new_note_tag input,
+.save_button {
+    background-color: white;
+    opacity: 0.3;
+}
+
+.menu_sec {
+    background-color: rgba(120, 59, 128);
+
+}
+
+.layout_button {
+    background-color: white;
+    opacity: 0.4;
+}
+.layout_button:hover {
+    background-color: white;
+    opacity: 0.3;
+}
