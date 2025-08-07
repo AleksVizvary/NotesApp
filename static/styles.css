@@ -1,0 +1,335 @@
+/* ============================= */
+/* ==== RESET + TYPOGRAPHY ==== */
+html, body {
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+body {
+    overflow: hidden;
+}
+* {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    color: black;
+}
+
+/* ===================== */
+/* ==== MAIN SPACE ==== */
+
+.display {
+    padding: 25px;
+    gap: 10px;
+
+    height: 100vh;
+    width: 100vw;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    border-style: black, solid;
+    border-radius: 25%;
+
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+        
+}
+
+/* ===================== */
+
+.header_space {
+    padding: 10px;
+
+    height: 90px;
+    width: 100%;
+
+    border-style: black, solid;
+    border-radius: 25%;
+
+    box-sizing: border-box;
+    flex-direction: row;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.body_space {
+    padding: 5px;
+    height: 90%;
+    width: 100%;
+
+    border-style: black, solid;
+    border-radius: 25%;
+
+    box-sizing: border-box;
+    flex-direction: row;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================= */
+/* ==== HEADER SECTION ==== */
+
+.search_form {
+    height: 7vw;
+    width: 100%;
+    margin-right: 0.8%;
+    margin-left: 0.8%;
+
+    border-radius: 25px;
+    display: flex;
+    padding-left: 0.6%;
+    padding-right: 0.6%;
+
+    align-items: center;
+    gap: 0.6%;
+}
+
+.search {
+    height: 6vw;
+    width: 100%;
+    border-radius: 25px;   
+    border: solid, 3px;
+}
+
+.search_button {
+    width: 6vw;
+    height: 6vw;
+    padding: 2px;
+    border-radius: 25px;    
+    border: solid, 3px;
+
+
+}
+
+input.search {
+    padding: 10px 15px;   
+}
+
+/* =========================== */
+/* ==== NEW_NOTE SECTION ==== */
+
+.new_note_sec {
+    height: 100%;
+    width: 20%;
+
+    border-right-width: 3px;
+    border-right-style: solid;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 35px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* NEW_NOTE */
+
+.new_note_form {
+    height: 100%;
+    padding: 2px;
+
+    border-radius: 25px;
+
+}
+
+.new_note_inside {
+    display: grid;
+    grid-template-rows: 
+        45px    /* title */
+        1fr     /* content */
+        45px    /* tags */
+        75px;   /* save button */
+
+    gap: 15px;
+    height: 100%;
+    width: 95%;
+
+    padding: 10px;
+    border-radius: 25px;
+}
+
+/* NEW_FORM ELEMENTS */
+
+.new_note_title input, 
+.new_note_content input, 
+.new_note_tag input, 
+.save_button {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 3px solid;
+    border-radius: 25px;
+}
+
+.new_note_title input, 
+.new_note_tag input {
+    text-align: left;          
+    padding: 10px 15px;   
+}
+
+.new_note_content input {
+    text-align: left; 
+    padding: 10px 15px;   
+    line-height: 1.4;
+    vertical-align: top;
+    padding-top: 10px;
+    border: 3px solid;
+}
+
+.new_note_content textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 3px solid;
+    resize: none;
+    font-size: 1rem;
+}
+
+/* ============================ */
+/* ==== OLD_NOTES SECTION ==== */
+
+.old_notes_sec {
+    height: 100%;
+    width: 70%;
+
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    row-gap: 17px;
+    overflow-y: auto;  
+
+    padding-top: 0.8%;
+    padding-bottom: 4%;
+    border-radius: 35px;
+    margin: 5px;
+}
+
+/* OLD_NOTE */
+.old_note {
+    display: grid;
+    grid-template-rows: 
+        45px    /* title */
+        auto    /* content */
+        75px    /* date */
+        75px;    /* tags */
+    ;
+
+    gap: 15px;
+    height: auto;
+
+    width: 95%;
+
+    padding: 10px;
+    border: 3px solid;
+    border-color: black;
+    border-radius: 25px;
+
+    word-break: break-all;
+}
+
+/* OLD_NOTE ELEMENTS */
+.title_box {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    align-items: center;
+    height: 45px;
+    padding: 0;
+
+}
+
+.old_note_title {
+    border-radius: 25px;
+    height: 40px;
+    padding-left: 25px;
+    padding-top: 10px;
+    align-items: center;
+    margin: 0;
+}
+
+.check
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.old_note_content,
+.old_note_date,
+.old_note_tag {
+    display: grid;
+    padding-left: 25px;
+
+    border-radius: 25px;
+    height: auto;
+    min-height: 45px;
+    margin: 0;
+    align-items: center;
+}
+
+/* =============== */
+/* ==== MENU ==== */
+.menu_sec {
+    height: 100%;
+    width: 7vw;
+
+    border-left-width: 3px;
+    border-left-style: solid;
+
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 35px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button_wrapper {
+    margin-top: 10%;
+
+    width: 6vw;
+    height: 6vw;
+    padding: 2px;
+    
+    border-radius: 25px;
+}
+
+.layout_button {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid, 3px;
+
+    text-align: center;
+}
+
+/* ============================ */
+/* =========================== */
+

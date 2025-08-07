@@ -1,0 +1,86 @@
+/* ================ */
+/* ==== RESET ==== */
+
+body, html {
+    background-color: black;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: black;  
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: black;  
+}
+
+/* ========================= */
+/* ==== HEADER SECTION ==== */
+
+.search_form {
+    background-color: rgb(74, 134, 127);
+}
+
+.search_button,
+.search {
+    background-color: white;
+    opacity: 0.4;
+}
+.search_button {
+    font-size: medium;
+}
+
+/* =========================== */
+/* ==== NEW_NOTE SECTION ==== */
+
+.new_note_sec {
+    background-color:#5e4fa2;
+}
+
+.new_note_sec input {
+    color: black;
+}
+
+.new_note_title input,
+.new_note_content textarea, 
+.new_note_tag input,
+.save_button {
+    background-color: white;
+    opacity: 0.3;
+}
+
+/* ============================ */
+/* ==== OLD_NOTES SECTION ==== */
+
+.old_notes_sec {
+    background-color: rgb(98, 175, 202);
+}
+.old_note{
+    background-color: white;
+    opacity: 0.4;
+}
+
+.old_note input {
+    color: black;
+}
+
+/* =============== */
+/* ==== MENU ==== */
+
+.menu_sec {
+    background-color: rgba(120, 59, 128);
+}
+
+.layout_button {
+    background-color: white;
+    opacity: 0.4;
+}
+
+.layout_button:hover {
+    background-color: white;
+    opacity: 0.3;
+}
+
+/* ============================ */
+/* =========================== */

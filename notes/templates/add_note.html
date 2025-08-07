@@ -3,39 +3,67 @@
 <html lang="pl">
 <head>
     <title>NOTES</title>
-    <link rel="stylesheet" href="{% static 'add_note_styles.css'%}">
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <link rel="stylesheet" href="{% static 'colors.css'%}">
 
 </head>
 <body>
-    <div class="container">
-        <div class="new_note_sec">
-            <div class="new_note_form">
-                <form method="POST" class="new_note_inside">
-                    {% csrf_token %}
-                    <div class="new_note_title">{{ form.title }}</div>
-                    <div class="new_note_content">{{ form.content }}</div>
-                    <div class="new_note_tag">{{ form.tags }}</div>
-                    <button class="save_button" type="submit" >Save</button>
-                </form>
-            </div>
+    <div class="display">
+
+        <div class="header_space">        
+            <form method="GET" action="{% url 'add_note' %}" class="search_form">
+                <input type="text" name="search" placeholder="Find note" value="{{ query }}" class="search">
+                <button type="submit" class="search_button">Search</button>
+            </form>
         </div>
 
-
-        <div class="old_notes_sec">
-            {% for note in notes %}
-            <div class="old_note">
-                <div class="title_box">
-                    <p class="old_note_title">{{ note.title }}</p>
-                    <label class="check">
-                        <input type="checkbox" class="checkbox">
-                        <span class="checkmark"></span>
-                    </label> 
+        <div class="body_space">
+            <div class="new_note_sec">
+                <div class="new_note_form">
+                    <form method="POST" class="new_note_inside">
+                        {% csrf_token %}
+                        <div class="new_note_title">{{ form.title }}</div>
+                        <div class="new_note_content">{{ form.content }}</div>
+                        <div class="new_note_tag">{{ form.tags }}</div>
+                        <button class="save_button" type="submit" >Save</button>
+                    </form>
                 </div>
-                <p class="old_note_content">{{ note.content}}</p>
-                <small class="old_note_date">{{ note.created_at }}</small>
-                <small class="old_note_tag">#{{ note.tags }}</small>
             </div>
-            {% endfor %}
-        </div>  
-    </div>  
+            
+            <div class="old_notes_sec">
+                {% for note in notes %}
+                <div class="old_note">
+                    <div class="title_box">
+                        <p class="old_note_title">{{ note.title }}</p>
+                        <form method="POST" action="{% url 'mark_done' note.id %}?next={{ request.get_full_path }}">
+                            {% csrf_token %}
+                            <label class="check">
+                                <input type="checkbox" class="checkbox" {% if note.done %}checked{% endif %} onChange="this.form.submit()">
+                            </label>
+                            <label class="delete">
+                                <input type="checkbox" class="delete">
+                            </label>
+                        </form>
+                    </div>
+                    <p class="old_note_content">{{ note.content }}</p>
+                    <small class="old_note_date">{{ note.created_at }}</small>
+                    <small class="old_note_tag">{{ note.tags }}</small>
+                </div>
+                {% endfor %}
+            </div>  
+
+            <div class="menu_sec">
+                <div class="button_wrapper">
+                    {% if show_done %}
+                        <a class="layout_button" href="?show_done=0&search={{ query }}">Show to-do</a>
+                    {% else %}
+                        <a class="layout_button" href="?show_done=1&search={{ query }}">Show done</a>
+                    {% endif %}
+                </div>
+                <div class="button_wrapper">
+                    <a class="layout_button" href="?show_all=1&search={{ query }}">Show all</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
