@@ -1,0 +1,218 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+
+}
+
+* {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+    font-size: large;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    color: black;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: black;  
+}
+
+.new_note_sec input {
+    color: black;
+}
+
+.old_note input {
+    color: black;
+}
+
+/* ======================================== */
+ 
+.container {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+
+    border-style: none;
+
+    box-sizing: border-box;
+    flex-direction: row;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* ==== 1 lvl, NEW_NOTE_SEC & OLD_NOTES_SEC ==== */
+
+.new_note_sec {
+    height: 100%;
+    width: 30%;
+    border: none;
+    border-right-width: 3px;
+    border-right-style: solid;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.old_notes_sec {
+    height: 90%;
+    width: 70%;
+
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    row-gap: 90px;
+    overflow-y: auto;  
+
+    
+}
+
+/* ==== 2 lvl, NEW_NOTE_FORM ===== */
+
+.new_note_form {
+    height: 90%;
+    padding: 2px;
+
+    border-radius: 25px;
+
+}
+
+.new_note_inside {
+    display: grid;
+    grid-template-rows: 
+        45px    /* title */
+        1fr     /* content */
+        45px    /* tags */
+        75px;   /* save button */
+
+    gap: 15px;
+    height: 100%;
+    width: 200px;
+
+    padding: 10px;
+    border-radius: 25px;
+}
+
+/* ==== 3 lvl, NEW_FORM ELEMENTS: TITLE, CONTENT, TAGS ===== */
+
+.new_note_title input, 
+.new_note_content input, 
+.new_note_tag input, 
+.save_button {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    border-radius: 25px;
+}
+
+.new_note_title input, 
+.new_note_tag input {
+    text-align: left;          
+    padding: 10px 15px;   
+}
+
+.new_note_content input {
+    text-align: left; 
+    padding: 10px 15px;   
+    line-height: 1.4;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.new_note_content textarea {
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+/* ==== 2 lvl, OLD_NOTE ===== */
+.old_note {
+    display: grid;
+    grid-template-rows: 
+        45px    /* title */
+        auto    /* content */
+        75px    /* date */
+        75px;    /* tags */
+    ;
+
+    gap: 15px;
+    height: auto;
+
+    width: 800px;
+    max-width: 100%;
+
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 25px;
+
+    word-break: break-all;
+}
+
+/* ==== 3 lvl, OLD FORMS ELEMENTS: TITLE, CONTENT, TAGS ===== */
+
+.title_box {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    align-items: center;
+    height: 45px;
+    padding: 0;
+
+}
+
+.old_note_title {
+    border-radius: 25px;
+    height: 40px;
+    padding-left: 25px;
+    padding-top: 10px;
+    align-items: center;
+    margin: 0;
+}
+
+.check
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.old_note_content,
+.old_note_date,
+.old_note_tag {
+    display: grid;
+    padding-left: 25px;
+
+    border-radius: 25px;
+    height: auto;
+    min-height: 45px;
+    margin: 0;
+    align-items: center;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+* {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: left;
+    
+}
+
+/* ======================================================================= */
