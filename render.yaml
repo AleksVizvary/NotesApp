@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: notesapp
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn notesproject.wsgi:application"
+    staticPublishPath: staticfiles
