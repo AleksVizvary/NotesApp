@@ -3,5 +3,5 @@ services:
     name: notesapp
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn notesproject.wsgi:application"
+    startCommand: "gunicorn notesproject.wsgi"
     staticPublishPath: staticfiles
